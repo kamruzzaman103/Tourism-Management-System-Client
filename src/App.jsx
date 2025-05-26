@@ -18,6 +18,8 @@ import AddStory from "./pages/dashboard/AddStory";
 import ManageStories from "./pages/dashboard/ManageStories";
 import UpdateStory from "./pages/dashboard/UpdateStory";
 import Stories from "./pages/Stories";
+import JoinAsTourGuide from "./pages/dashboard/JoinAsTourGuide";
+import AdminDashboardProfilePage from "./pages/dashboard/admin/AdminDashboardProfilePage";
 // import ForgotPassword from './pages/ForgotPassword'
 
 
@@ -45,6 +47,8 @@ function App() {
               <Route path="add-story" element={<AddStory />} />
               <Route path="manage-stories" element={<ManageStories />} />
               <Route path="update-story/:id" element={<UpdateStory />} />
+              <Route path="join-tour-guide" element={<JoinAsTourGuide />} />
+              <Route path="/dashboard/admin/profile" element={<AdminDashboardProfilePage />} />
              
 
 

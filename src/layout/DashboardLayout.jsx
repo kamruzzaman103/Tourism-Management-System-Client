@@ -45,7 +45,7 @@ const DashboardLayout = () => {
 
   const adminLinks = (
     <>
-      <li><NavLink to="/dashboard" className="font-medium">Manage Profile</NavLink></li>
+      <li><NavLink to="/dashboard/admin/profile" className="font-medium">Manage Profile</NavLink></li>
       <li><NavLink to="/dashboard/admin/stats">Dashboard Stats</NavLink></li>
       <li><NavLink to="/dashboard/admin/manage-users">Manage Users</NavLink></li>
       <li><NavLink to="/dashboard/admin/manage-candidates">Manage Candidates</NavLink></li>
