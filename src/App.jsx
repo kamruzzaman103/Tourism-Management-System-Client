@@ -11,6 +11,13 @@ import Home from "./pages/Home";
 import PackageDetails from "./pages/PackageDetails/PackageDetails";
 import DashboardLayout from "./layout/DashboardLayout";
 import TouristProfile from "./pages/dashboard/TouristProfile";
+import MyBookings from "./pages/dashboard/MyBookings";
+import Payment from "./pages/dashboard/Payment";
+import PaymentSuccess from "./pages/dashboard/PaymentSuccess";
+import AddStory from "./pages/dashboard/AddStory";
+import ManageStories from "./pages/dashboard/ManageStories";
+import UpdateStory from "./pages/dashboard/UpdateStory";
+import Stories from "./pages/Stories";
 // import ForgotPassword from './pages/ForgotPassword'
 
 
@@ -27,10 +34,19 @@ function App() {
           <Route path="/register" element={<Register />} />
           {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
           <Route path="/packages/:id" element={<PackageDetails />} />
+          <Route path="/stories" element={<Stories />} />
 
           {/* <Route path="*" element={<NotFoundPage/>} /> */}
           <Route path="/dashboard" element={<DashboardLayout />}>
-          <Route path="tourist-profile" element={<TouristProfile />} />
+              <Route path="tourist-profile" element={<TouristProfile />} />
+              <Route path="my-bookings" element={<MyBookings />} />
+              <Route path="payment/:id" element={<Payment />} />
+              <Route path="payment-success" element={<PaymentSuccess />} />
+              <Route path="add-story" element={<AddStory />} />
+              <Route path="manage-stories" element={<ManageStories />} />
+              <Route path="update-story/:id" element={<UpdateStory />} />
+             
+
 
 
 

@@ -28,7 +28,7 @@ const DashboardLayout = () => {
     <>
       <li><NavLink to="/dashboard/tourist-profile" className="font-medium">Manage Profile</NavLink></li>
       <li><NavLink to="/dashboard/my-bookings">My Bookings</NavLink></li>
-      <li><NavLink to="/dashboard/add-stories">Add Stories</NavLink></li>
+      <li><NavLink to="/dashboard/add-story">Add Stories</NavLink></li>
       <li><NavLink to="/dashboard/manage-stories">Manage Stories</NavLink></li>
       <li><NavLink to="/dashboard/join-tour-guide">Join as Tour Guide</NavLink></li>
     </>
