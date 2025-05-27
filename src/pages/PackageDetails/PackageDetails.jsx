@@ -57,7 +57,7 @@ const PackageDetails = () => {
   useEffect(() => {
     const fetchPackageDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/packages/${id}`);
+        const response = await axios.get(`http://localhost:5000/api/packages/${id}`);
         setPackageInfo(response.data.package);
         setGuides(response.data.guides);
       } catch (error) {
@@ -72,8 +72,8 @@ const PackageDetails = () => {
 
   return (
     <div className="px-6 py-12">
-      <Gallery images={packageInfo.images} />
-      <AboutTour description={packageInfo.description} />
+      <Gallery images={packageInfo.galleryImages} />
+      <AboutTour description={packageInfo.about} />
       <TourPlan plan={packageInfo.tourPlan} />
       <TourGuides guides={guides} />
       <BookingForm

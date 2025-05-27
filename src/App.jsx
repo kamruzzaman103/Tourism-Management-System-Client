@@ -19,7 +19,11 @@ import ManageStories from "./pages/dashboard/ManageStories";
 import UpdateStory from "./pages/dashboard/UpdateStory";
 import Stories from "./pages/Stories";
 import JoinAsTourGuide from "./pages/dashboard/JoinAsTourGuide";
+// import PrivateRoute from "./routes/PrivateRoute";
 import AdminDashboardProfilePage from "./pages/dashboard/admin/AdminDashboardProfilePage";
+import AddPackage from "./pages/dashboard/admin/AddPackage";
+import UserManagement from "./pages/dashboard/admin/UserManagement";
+import ManageCandidates from "./pages/dashboard/admin/ManageCandidates";
 // import ForgotPassword from './pages/ForgotPassword'
 
 
@@ -49,10 +53,12 @@ function App() {
               <Route path="update-story/:id" element={<UpdateStory />} />
               <Route path="join-tour-guide" element={<JoinAsTourGuide />} />
               <Route path="/dashboard/admin/profile" element={<AdminDashboardProfilePage />} />
+              <Route path="/dashboard/admin/add-package" element={<AddPackage />} />
+              <Route path="/dashboard/admin/manage-users" element={<UserManagement />} />
+              <Route path="/dashboard/admin/manage-candidates" element={<ManageCandidates />} />
              
 
-
-
+            
 
 
 

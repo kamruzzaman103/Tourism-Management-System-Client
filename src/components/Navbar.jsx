@@ -311,6 +311,15 @@ const Navbar = () => {
     }
   }, [user]);
 
+  
+    const [packages, setPackages] = useState([]);
+  
+    useEffect(() => {
+      axios.get("http://localhost:5000/api/packages")
+        .then(res => setPackages(res.data))
+        .catch(err => console.error("Error fetching packages:", err));
+    }, []);
+
   const handleLogout = async () => {
     await logout();
     navigate("/login");
@@ -324,9 +333,17 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/packages/123" className="font-semibold hover:text-purple-600">
-          Packages
-        </NavLink>
+      <ul>
+        {packages.length > 0 ? (
+          packages.map((item) => (
+            <li key={item._id}>
+              <NavLink to={`/packages/${item._id}`}>Pakages</NavLink>
+            </li>
+          ))
+        ) : (
+          <li>Loading packages...</li>
+        )}
+      </ul>
       </li>
       <li>
         <NavLink to="/guides" className="font-semibold hover:text-purple-600">
