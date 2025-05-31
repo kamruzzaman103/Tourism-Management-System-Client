@@ -8,7 +8,7 @@
 
 //   const fetchStories = async () => {
 //     try {
-//       const res = await axios.get('http://localhost:5000/api/stories/my-stories', {
+//       const res = await axios.get('https://tourism-management-system-server.onrender.com/api/stories/my-stories', {
 //         withCredentials: true,
 //       });
 //       setStories(res.data);
@@ -32,7 +32,7 @@
 
 //     if (confirm.isConfirmed) {
 //       try {
-//         const res = await axios.delete(`http://localhost:5000/api/stories/${id}`, {
+//         const res = await axios.delete(`https://tourism-management-system-server.onrender.com/api/stories/${id}`, {
 //           withCredentials: true,
 //         });
 
@@ -54,7 +54,7 @@
 //           <p className="text-gray-600">{story.description.slice(0, 100)}...</p>
 //           <div className="flex gap-2 mt-2 overflow-x-auto">
 //             {story.images.map((img, i) => (
-//               <img key={i} src={`http://localhost:5000/uploads/stories/${img}`} alt="" className="w-24 h-24 object-cover rounded" />
+//               <img key={i} src={`https://tourism-management-system-server.onrender.com/uploads/stories/${img}`} alt="" className="w-24 h-24 object-cover rounded" />
 //             ))}
 //           </div>
 //           <div className="mt-4 flex gap-4">
@@ -85,7 +85,7 @@
 //   const fetchStories = async () => {
 //     setLoading(true);
 //     try {
-//       const res = await axios.get('http://localhost:5000/api/stories/my-stories', {
+//       const res = await axios.get('https://tourism-management-system-server.onrender.com/api/stories/my-stories', {
 //         withCredentials: true,
 //         headers: {
 //           Authorization: `Bearer ${token}`,
@@ -115,7 +115,7 @@
 
 //     if (confirm.isConfirmed) {
 //       try {
-//         const res = await axios.delete(`http://localhost:5000/api/stories/${id}`, {
+//         const res = await axios.delete(`https://tourism-management-system-server.onrender.com/api/stories/${id}`, {
 //           withCredentials: true,
 //           headers: {
 //             Authorization: `Bearer ${token}`,
@@ -148,7 +148,7 @@
 //               {story.images.map((img, i) => (
 //                 <img
 //                   key={i}
-//                   src={`http://localhost:5000/uploads/stories/${img}`}
+//                   src={`https://tourism-management-system-server.onrender.com/uploads/stories/${img}`}
 //                   alt={`story-${i}`}
 //                   className="w-24 h-24 object-cover rounded"
 //                 />
@@ -189,7 +189,7 @@
 //     const token = localStorage.getItem('token');
 
 //     try {
-//       const res = await axios.get('http://localhost:5000/api/stories/my-stories', {
+//       const res = await axios.get('https://tourism-management-system-server.onrender.com/api/stories/my-stories', {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
 //         },
@@ -218,7 +218,7 @@
 //       try {
 //         const token = localStorage.getItem('token');
 
-//         const res = await axios.delete(`http://localhost:5000/api/stories/${id}`, {
+//         const res = await axios.delete(`https://tourism-management-system-server.onrender.com/api/stories/${id}`, {
 //           headers: {
 //             Authorization: `Bearer ${token}`,
 //           },
@@ -245,7 +245,7 @@
 //             {story.images.map((img, i) => (
 //               <img
 //                 key={i}
-//                 src={`http://localhost:5000/uploads/stories/${img}`}
+//                 src={`https://tourism-management-system-server.onrender.com/uploads/stories/${img}`}
 //                 alt=""
 //                 className="w-24 h-24 object-cover rounded"
 //               />
@@ -287,7 +287,7 @@ const ManageStories = () => {
     const token = localStorage.getItem('token');
 
     try {
-      const res = await axios.get('http://localhost:5000/api/stories/my-stories', {  // সব স্টোরি আনছে
+      const res = await axios.get('https://tourism-management-system-server.onrender.com/api/stories/my-stories', {  // সব স্টোরি আনছে
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -323,7 +323,7 @@ const ManageStories = () => {
       try {
         const token = localStorage.getItem('token');
 
-        const res = await axios.delete(`http://localhost:5000/api/stories/${id}`, {
+        const res = await axios.delete(`https://tourism-management-system-server.onrender.com/api/stories/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -350,7 +350,7 @@ const ManageStories = () => {
             {story.images.map((img, i) => (
               <img
                 key={i}
-                src={`http://localhost:5000/uploads/stories/${img}`}
+                src={`https://tourism-management-system-server.onrender.com/uploads/stories/${img}`}
                 alt=""
                 className="w-24 h-24 object-cover rounded"
               />

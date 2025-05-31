@@ -29,7 +29,7 @@
 //       await updateUserProfile(name, photo);
 
 //       // Save to backend
-//       await fetch("http://localhost:5000/users", {
+//       await fetch("https://tourism-management-system-server.onrender.com/users", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify({
@@ -101,7 +101,7 @@ const Register = () => {
       await updateUserProfile(name, photo);
 
       // 2. Save User to Database
-      await fetch("http://localhost:5000/users", {
+      await fetch("https://tourism-management-system-server.onrender.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -113,7 +113,7 @@ const Register = () => {
       });
 
       // 3. Get Token and Save to LocalStorage
-      const tokenRes = await fetch("http://localhost:5000/jwt", {
+      const tokenRes = await fetch("https://tourism-management-system-server.onrender.com/jwt", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

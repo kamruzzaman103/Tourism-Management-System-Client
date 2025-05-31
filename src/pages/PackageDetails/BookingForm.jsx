@@ -65,7 +65,7 @@ import { useAuth } from "../../context/AuthContext";
 import toast from "react-hot-toast";
 import axios from "axios";
 
-const BookingForm = ({ packageName, price, guides }) => {
+const BookingForm = ({ packageName, price,tourGuideEmail, guides }) => {
   const { user } = useAuth();
   const [date, setDate] = useState(new Date());
   const [selectedGuide, setSelectedGuide] = useState("");
@@ -82,13 +82,14 @@ const BookingForm = ({ packageName, price, guides }) => {
       touristEmail: user.email,
       touristImage: user.photoURL,
       price,
+      tourGuideEmail,
       date,
       guide: selectedGuide,
       status: "pending"
     };
 
     try {
-      await axios.post("http://localhost:5000/bookings", booking);
+      await axios.post("https://tourism-management-system-server.onrender.com/api/bookings", booking);
       toast.success("Confirm your Booking");
       // Redirect to My Bookings (optional)
     } catch (error) {

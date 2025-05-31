@@ -26,7 +26,7 @@
 //     try {
 //       const result = await googleLogin();
 //       const { displayName, email, photoURL } = result.user;
-//       await fetch("http://localhost:5000/users", {
+//       await fetch("https://tourism-management-system-server.onrender.com/users", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify({ name: displayName, email, photo: photoURL, role: "tourist" }),
@@ -68,7 +68,7 @@ const Login = () => {
 
   const saveToken = async (email) => {
     try {
-      const res = await axios.post("http://localhost:5000/jwt", { email });
+      const res = await axios.post("https://tourism-management-system-server.onrender.com/jwt", { email });
       localStorage.setItem("token", res.data.token); // ✅ Save token
     } catch (error) {
       console.error("JWT token fetch error:", error);
@@ -96,7 +96,7 @@ const Login = () => {
       const { displayName, email, photoURL } = result.user;
 
       // ✅ Save user in DB (optional)
-      await fetch("http://localhost:5000/users", {
+      await fetch("https://tourism-management-system-server.onrender.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: displayName, email, photo: photoURL, role: "tourist" }),

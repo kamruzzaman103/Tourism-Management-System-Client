@@ -20,7 +20,7 @@ export default function ManageUsers() {
       if (search) params.search = search;
       if (selectedRole.value) params.role = selectedRole.value;
 
-      const res = await axios.get('http://localhost:5000/users', { params });
+      const res = await axios.get('https://tourism-management-system-server.onrender.com/users', { params });
       setUsers(res.data);
     };
     fetchUsers();

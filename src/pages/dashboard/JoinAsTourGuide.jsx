@@ -26,7 +26,7 @@
 //     };
 
 //     try {
-//       await axios.post("http://localhost:5000/api/tour-guide-applications", application, {
+//       await axios.post("https://tourism-management-system-server.onrender.com/api/tour-guide-applications", application, {
 //         withCredentials: true,
 //       });
 //       Swal.fire("Success!", "Your application has been submitted!", "success");
@@ -102,7 +102,7 @@ const JoinAsTourGuide = () => {
     const token = localStorage.getItem("token");
 
     try {
-      await axios.post("http://localhost:5000/api/tour-guide-applications", application, {
+      await axios.post("https://tourism-management-system-server.onrender.com/api/tour-guide-applications", application, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

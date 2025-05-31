@@ -103,7 +103,7 @@ const ManageCandidates = () => {
   const token = localStorage.getItem('token');
 
   const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000/api', // ⛳ তোমার API এর base URL এখানে বসাও
+    baseURL: 'https://tourism-management-system-server.onrender.com/api', // ⛳ তোমার API এর base URL এখানে বসাও
     headers: {
       Authorization: `Bearer ${token}`,
     },

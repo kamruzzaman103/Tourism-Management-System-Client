@@ -29,7 +29,7 @@
 //     const token = localStorage.getItem('token'); // ✅ get token from localStorage
 
 //     try {
-//       const res = await axios.post('http://localhost:5000/api/stories', formData, {
+//       const res = await axios.post('https://tourism-management-system-server.onrender.com/api/stories', formData, {
 //         headers: {
 //           'Content-Type': 'multipart/form-data',
 //           Authorization: `Bearer ${token}`, // ✅ set token in Authorization header
@@ -117,7 +117,7 @@
 //     }
 
 //     try {
-//       const res = await axios.post('http://localhost:5000/api/stories', formData, {
+//       const res = await axios.post('https://tourism-management-system-server.onrender.com/api/stories', formData, {
 //         headers: {
 //           'Content-Type': 'multipart/form-data',
 //           Authorization: `Bearer ${token}`,         // ✅ Send token in Authorization header
@@ -208,7 +208,7 @@ const AddStory = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/stories', formData, {
+      const res = await axios.post('https://tourism-management-system-server.onrender.com/api/stories', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,

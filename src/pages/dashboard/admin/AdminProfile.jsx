@@ -23,7 +23,7 @@
 //   }, [user]);
 
 //   const handleUpdate = async () => {
-//     await axios.put(`http://localhost:5000/api/users/profile/${user.email}`, form);
+//     await axios.put(`https://tourism-management-system-server.onrender.com/api/users/profile/${user.email}`, form);
 //     setIsOpen(false);
 //     window.location.reload(); // reload profile
 //   };
@@ -84,7 +84,7 @@
 //   useEffect(() => {
 //     // ✅ check if user and user.email exists
 //     if (user?.email) {
-//       axios.get(`http://localhost:5000/api/users/profile/${user.email}`)
+//       axios.get(`https://tourism-management-system-server.onrender.com/api/users/profile/${user.email}`)
 //         .then(res => {
 //           setAdmin(res.data);
 //           setForm({
@@ -98,7 +98,7 @@
 //   }, [user]);
 
 //   const handleUpdate = async () => {
-//     await axios.put(`http://localhost:5000/api/users/profile/${user.email}`, form);
+//     await axios.put(`https://tourism-management-system-server.onrender.com/api/users/profile/${user.email}`, form);
 //     setIsOpen(false);
 //     window.location.reload();
 //   };
@@ -181,7 +181,7 @@ const AdminProfile = () => {
 
   useEffect(() => {
     if (user?.email) {
-      axios.get(`http://localhost:5000/api/users/profile/${user.email}`)
+      axios.get(`https://tourism-management-system-server.onrender.com/api/users/profile/${user.email}`)
         .then(res => {
           setAdmin(res.data);
           setForm({
@@ -196,7 +196,7 @@ const AdminProfile = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/users/profile/${user.email}`, form);
+      await axios.put(`https://tourism-management-system-server.onrender.com/api/users/profile/${user.email}`, form);
       setIsOpen(false);
       toast.success(" Profile updated successfully!"); // ✅ show toast
       setTimeout(() => {

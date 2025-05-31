@@ -11,7 +11,7 @@ const DashboardLayout = () => {
   useEffect(() => {
     if (user?.email) {
       axios
-        .get(`http://localhost:5000/users/role/${user.email}`)
+        .get(`https://tourism-management-system-server.onrender.com/users/role/${user.email}`)
         .then(response => {
           setRole(response.data?.role);
         })
@@ -36,9 +36,9 @@ const DashboardLayout = () => {
 
   const guideLinks = (
     <>
-      <li><NavLink to="/dashboard" className="font-medium">Manage Profile</NavLink></li>
+      <li><NavLink to="/dashboard/tourist-profile" className="font-medium">Manage Profile</NavLink></li>
       <li><NavLink to="/dashboard/assigned-tours">My Assigned Tours</NavLink></li>
-      <li><NavLink to="/dashboard/add-stories">Add Stories</NavLink></li>
+      <li><NavLink to="/dashboard/add-story">Add Stories</NavLink></li>
       <li><NavLink to="/dashboard/manage-stories">Manage Stories</NavLink></li>
     </>
   );

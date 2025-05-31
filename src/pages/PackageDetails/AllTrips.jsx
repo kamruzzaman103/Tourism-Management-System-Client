@@ -6,7 +6,7 @@ const AllTrips = () => {
   const [packages, setPackages] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/packages")
+    fetch("https://tourism-management-system-server.onrender.com/packages")
       .then(res => res.json())
       .then(data => setPackages(data));
   }, []);

@@ -8,11 +8,11 @@ const TourGuideProfile = () => {
   const [stories, setStories] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/tour-guides/${id}`)
+    fetch(`https://tourism-management-system-server.onrender.com/tour-guides/${id}`)
       .then(res => res.json())
       .then(data => setGuide(data));
 
-    fetch(`http://localhost:5000/stories?guideId=${id}`)
+    fetch(`https://tourism-management-system-server.onrender.com/stories?guideId=${id}`)
       .then(res => res.json())
       .then(data => setStories(data));
   }, [id]);

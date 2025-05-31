@@ -24,6 +24,7 @@ import AdminDashboardProfilePage from "./pages/dashboard/admin/AdminDashboardPro
 import AddPackage from "./pages/dashboard/admin/AddPackage";
 import UserManagement from "./pages/dashboard/admin/UserManagement";
 import ManageCandidates from "./pages/dashboard/admin/ManageCandidates";
+import MyAssignedTours from "./pages/dashboard/tourguide/MyAssignedTours";
 // import ForgotPassword from './pages/ForgotPassword'
 
 
@@ -56,6 +57,8 @@ function App() {
               <Route path="/dashboard/admin/add-package" element={<AddPackage />} />
               <Route path="/dashboard/admin/manage-users" element={<UserManagement />} />
               <Route path="/dashboard/admin/manage-candidates" element={<ManageCandidates />} />
+              <Route path="/dashboard/assigned-tours" element={<MyAssignedTours />} />
+            
              
 
             

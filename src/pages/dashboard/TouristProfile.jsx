@@ -15,7 +15,7 @@
 
 //   useEffect(() => {
 //     setLoading(true);
-//     axios.get(`http://localhost:5000/api/users/${user.email}`)
+//     axios.get(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`)
 //       .then(res => {
 //         setProfile(res.data);
 //         setFormData(res.data);
@@ -29,7 +29,7 @@
 //   }, [user]);
 
 //   const handleEdit = () => {
-//     axios.put(`http://localhost:5000/api/users/${user.email}`, formData)
+//     axios.put(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`, formData)
 //       .then(() => {
 //         setProfile(formData);
 //         setEditModal(false);
@@ -97,7 +97,7 @@
 
 //     setLoading(true);
 //     axios
-//       .get(`http://localhost:5000/api/users/${user.email}`)
+//       .get(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`)
 //       .then((res) => {
 //         setProfile(res.data);
 //         setFormData(res.data);
@@ -112,7 +112,7 @@
 
 //   const handleEdit = () => {
 //     axios
-//       .put(`http://localhost:5000/api/users/${user.email}`, formData)
+//       .put(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`, formData)
 //       .then(() => {
 //         setProfile(formData);
 //         setEditModal(false);
@@ -226,7 +226,7 @@ export default function TouristProfile() {
 
     setLoading(true);
     axios
-      .get(`http://localhost:5000/api/users/${user.email}`)
+      .get(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`)
       .then((res) => {
         setProfile(res.data);
         setFormData(res.data);
@@ -241,7 +241,7 @@ export default function TouristProfile() {
 
   const handleEdit = () => {
     axios
-      .put(`http://localhost:5000/api/users/${user.email}`, {
+      .put(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`, {
         name: formData.name,
         photo: formData.photo,
         bio: formData.bio,
@@ -350,14 +350,14 @@ export default function TouristProfile() {
 //   const [form, setForm] = useState({});
 
 //   useEffect(() => {
-//     axios.get(`http://localhost:5000/api/users/${user.email}`).then(res => {
+//     axios.get(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`).then(res => {
 //       setProfile(res.data);
 //       setForm(res.data);
 //     });
 //   }, [user.email]);
 
 //   const handleUpdate = () => {
-//     axios.put(`http://localhost:5000/api/users/${user.email}`, form).then(res => {
+//     axios.put(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`, form).then(res => {
 //       setProfile(res.data);
 //       setIsOpen(false);
 //     });
@@ -439,7 +439,7 @@ export default function TouristProfile() {
 
 //   useEffect(() => {
 //     if (user?._id) {
-//       axios.get(`http://localhost:5000/api/users/${user.email}`)
+//       axios.get(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`)
 //         .then(res => {
 //           setProfile(res.data);
 //           setFormData(res.data);
@@ -449,7 +449,7 @@ export default function TouristProfile() {
 //   }, [user]);
 
 //   const handleEdit = () => {
-//     axios.put(`http://localhost:5000/api/users/${user.email}`, formData)
+//     axios.put(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`, formData)
 //       .then(() => {
 //         setProfile(formData);
 //         setEditModal(false);
@@ -504,7 +504,7 @@ export default function TouristProfile() {
 
 //   useEffect(() => {
 //     if (user?._id) {
-//       axios.get(`http://localhost:5000/api/users/${user.email}`)
+//       axios.get(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`)
 //         .then(res => {
 //           setProfile(res.data);
 //           setFormData(res.data);
@@ -524,7 +524,7 @@ export default function TouristProfile() {
 //       return;
 //     }
 
-//     axios.put(`http://localhost:5000/api/users/${user.email}`, formData)
+//     axios.put(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`, formData)
 //       .then(res => {
 //         setProfile(res.data);
 //         toast.success("✅ Profile updated successfully!");
@@ -580,14 +580,14 @@ export default function TouristProfile() {
 //   const [form, setForm] = useState({});
 
 //   useEffect(() => {
-//     axios.get(`http://localhost:5000/api/users/${user.email}`).then(res => {
+//     axios.get(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`).then(res => {
 //       setProfile(res.data);
 //       setForm(res.data);
 //     });
 //   }, [user.email]);
 
 //   const handleUpdate = () => {
-//     axios.put(`http://localhost:5000/api/users/${user.email}`, form).then(res => {
+//     axios.put(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`, form).then(res => {
 //       setProfile(res.data);
 //       setIsOpen(false);
 //     });

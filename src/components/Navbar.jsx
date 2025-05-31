@@ -10,7 +10,7 @@
 
 //   useEffect(() => {
 //     if (user) {
-//       fetch(`http://localhost:5000/users/role/${user.email}`)
+//       fetch(`https://tourism-management-system-server.onrender.com/users/role/${user.email}`)
 //         .then(res => res.json())
 //         .then(data => setRole(data.role));
 //     }
@@ -84,7 +84,7 @@
 
 //   useEffect(() => {
 //     if (user) {
-//       fetch(`http://localhost:5000/users/role/${user.email}`)
+//       fetch(`https://tourism-management-system-server.onrender.com/users/role/${user.email}`)
 //         .then(res => res.json())
 //         .then(data => setRole(data.role));
 //     }
@@ -189,7 +189,7 @@
 
 //   useEffect(() => {
 //     if (user) {
-//       fetch(`http://localhost:5000/api/users/${user.email}`)
+//       fetch(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`)
 //         .then(res => res.json())
 //         .then(data => setRole(data.role));
 //     }
@@ -305,7 +305,7 @@ const Navbar = () => {
   useEffect(() => {
     if (user?.email) {
       axios
-        .get(`http://localhost:5000/api/users/${user.email}`)
+        .get(`https://tourism-management-system-server.onrender.com/api/users/${user.email}`)
         .then((res) => setUserInfo(res.data))
         .catch((err) => console.error("Failed to fetch user info:", err));
     }
@@ -315,7 +315,7 @@ const Navbar = () => {
     const [packages, setPackages] = useState([]);
   
     useEffect(() => {
-      axios.get("http://localhost:5000/api/packages")
+      axios.get("https://tourism-management-system-server.onrender.com/api/packages")
         .then(res => setPackages(res.data))
         .catch(err => console.error("Error fetching packages:", err));
     }, []);

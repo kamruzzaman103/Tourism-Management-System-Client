@@ -13,7 +13,7 @@ const PaymentSuccess = () => {
   useEffect(() => {
     const saveTransaction = async () => {
       try {
-        const res = await axios.patch(`http://localhost:5000/api/bookings/payment/${bookingId}`, {
+        const res = await axios.patch(`https://tourism-management-system-server.onrender.com/api/bookings/payment/${bookingId}`, {
           transactionId,
         });
 

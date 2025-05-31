@@ -10,14 +10,14 @@
 //   const [newImages, setNewImages] = useState([]);
 
 //   useEffect(() => {
-//     axios.get(`http://localhost:5000/api/stories/${id}`, { withCredentials: true })
+//     axios.get(`https://tourism-management-system-server.onrender.com/api/stories/${id}`, { withCredentials: true })
 //       .then(res => setStory(res.data))
 //       .catch(err => console.error(err));
 //   }, [id]);
 
 //   const handleDeleteImage = async (imageName) => {
 //     try {
-//       const res = await axios.patch(`http://localhost:5000/api/stories/remove-image/${id}`, { imageName }, { withCredentials: true });
+//       const res = await axios.patch(`https://tourism-management-system-server.onrender.com/api/stories/remove-image/${id}`, { imageName }, { withCredentials: true });
 //       if (res.data.modifiedCount > 0) {
 //         setStory((prev) => ({
 //           ...prev,
@@ -42,7 +42,7 @@
 //     newImages.forEach((img) => formData.append('images', img));
 
 //     try {
-//       await axios.patch(`http://localhost:5000/api/stories/update/${id}`, formData, {
+//       await axios.patch(`https://tourism-management-system-server.onrender.com/api/stories/update/${id}`, formData, {
 //         headers: { 'Content-Type': 'multipart/form-data' },
 //         withCredentials: true,
 //       });
@@ -65,7 +65,7 @@
 //       <div className="flex gap-4 overflow-x-auto">
 //         {story.images.map((img, i) => (
 //           <div key={i} className="relative">
-//             <img src={`http://localhost:5000/uploads/stories/${img}`} alt="" className="w-24 h-24 rounded object-cover" />
+//             <img src={`https://tourism-management-system-server.onrender.com/uploads/stories/${img}`} alt="" className="w-24 h-24 rounded object-cover" />
 //             <button
 //               type="button"
 //               onClick={() => handleDeleteImage(img)}
@@ -105,7 +105,7 @@ const UpdateStory = () => {
   // ✅ Load the story by ID
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/stories/${id}`, {
+      .get(`https://tourism-management-system-server.onrender.com/api/stories/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -118,7 +118,7 @@ const UpdateStory = () => {
   const handleDeleteImage = async (imageName) => {
     try {
       const res = await axios.patch(
-        `http://localhost:5000/api/stories/remove-image/${id}`,
+        `https://tourism-management-system-server.onrender.com/api/stories/remove-image/${id}`,
         { imageName },
         {
           headers: {
@@ -153,7 +153,7 @@ const UpdateStory = () => {
 
     try {
       await axios.patch(
-        `http://localhost:5000/api/stories/update/${id}`,
+        `https://tourism-management-system-server.onrender.com/api/stories/update/${id}`,
         formData,
         {
           headers: {
@@ -199,7 +199,7 @@ const UpdateStory = () => {
         {story.images.map((img, i) => (
           <div key={i} className="relative">
             <img
-              src={`http://localhost:5000/uploads/stories/${img}`}
+              src={`https://tourism-management-system-server.onrender.com/uploads/stories/${img}`}
               alt=""
               className="w-24 h-24 rounded object-cover"
             />

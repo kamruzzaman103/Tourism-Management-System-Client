@@ -9,11 +9,11 @@ const TourismGuideTabs = () => {
   const [guides, setGuides] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/packages/random")
+    fetch("https://tourism-management-system-server.onrender.com/packages/random")
       .then(res => res.json())
       .then(data => setPackages(data));
 
-    fetch("http://localhost:5000/guides/random")
+    fetch("https://tourism-management-system-server.onrender.com/guides/random")
       .then(res => res.json())
       .then(data => setGuides(data));
   }, []);

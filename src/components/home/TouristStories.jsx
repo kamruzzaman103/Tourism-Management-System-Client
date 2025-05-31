@@ -10,7 +10,7 @@ const TouristStories = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/stories/random")
+    fetch("https://tourism-management-system-server.onrender.com/stories/random")
       .then(res => res.json())
       .then(data => setStories(data));
   }, []);

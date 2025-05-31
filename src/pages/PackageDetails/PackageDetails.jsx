@@ -57,7 +57,7 @@ const PackageDetails = () => {
   useEffect(() => {
     const fetchPackageDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/packages/${id}`);
+        const response = await axios.get(`https://tourism-management-system-server.onrender.com/api/packages/${id}`);
         setPackageInfo(response.data.package);
         setGuides(response.data.guides);
       } catch (error) {
@@ -77,8 +77,9 @@ const PackageDetails = () => {
       <TourPlan plan={packageInfo.tourPlan} />
       <TourGuides guides={guides} />
       <BookingForm
-        packageName={packageInfo.name}
+        packageName={packageInfo.packageName}
         price={packageInfo.price}
+        tourGuideEmail={packageInfo.tourGuideEmail}
         guides={guides}
       />
       <AllTrips></AllTrips>

@@ -5,7 +5,7 @@ const AdminStats = () => {
   const [stats, setStats] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/admin/stats').then(res => setStats(res.data));
+    axios.get('https://tourism-management-system-server.onrender.com/api/admin/stats').then(res => setStats(res.data));
   }, []);
 
   if (!stats) return <div className="text-center mt-10">Loading stats...</div>;

@@ -58,7 +58,7 @@ export const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
       if (currentUser) {
-        const res = await axios.post("http://localhost:5000/jwt", {
+        const res = await axios.post("https://tourism-management-system-server.onrender.com/jwt", {
           email: currentUser.email,
         });
         localStorage.setItem("access-token", res.data.token);

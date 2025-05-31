@@ -20,7 +20,7 @@
 
 //   // Fetch tour guides
 //   useEffect(() => {
-//     axios.get("http://localhost:5000/api/users").then((res) => setTourGuides(res.data));
+//     axios.get("https://tourism-management-system-server.onrender.com/api/users").then((res) => setTourGuides(res.data));
 //   }, []);
 
 //   const onSubmit = async (data) => {
@@ -39,7 +39,7 @@
 
 //     try {
 //       const token = localStorage.getItem("token");
-//       await axios.post("http://localhost:5000/api/packages/add", packageData, {
+//       await axios.post("https://tourism-management-system-server.onrender.com/api/packages/add", packageData, {
 //         headers: { Authorization: `Bearer ${token}` }
 //       });
 //       toast.success("Package added successfully!");
@@ -140,7 +140,7 @@
 //   useEffect(() => {
 //     const fetchGuides = async () => {
 //       try {
-//         const res = await axios.get("http://localhost:5000/api/users");
+//         const res = await axios.get("https://tourism-management-system-server.onrender.com/api/users");
 //         setTourGuides(res.data);
 //       } catch (err) {
 //         console.error(err);
@@ -167,7 +167,7 @@
 //     const token = localStorage.getItem("token");
 
 //     try {
-//       await axios.post("http://localhost:5000/api/packages/add", packageData, {
+//       await axios.post("https://tourism-management-system-server.onrender.com/api/packages/add", packageData, {
 //         headers: {
 //           Authorization: `Bearer ${token}`
 //         }
@@ -303,7 +303,7 @@ const AddPackage = () => {
   useEffect(() => {
     const fetchGuides = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/users");
+        const res = await axios.get("https://tourism-management-system-server.onrender.com/api/users");
         setTourGuides(res.data);
       } catch (err) {
         console.error(err);
@@ -330,13 +330,14 @@ const AddPackage = () => {
         { day: "Day 2", plan: data.day2 }
       ],
       tourGuides: [data.tourGuideId],
+      tourGuideEmail: tourGuides.find(g => g._id === data.tourGuideId)?.email || "",
       createdBy: user._id // ✅ backend চাইলে createdBy দিয়ে পাঠানো যায়
     };
 
     const token = localStorage.getItem("token");
 
     try {
-      await axios.post("http://localhost:5000/api/packages/add", packageData, {
+      await axios.post("https://tourism-management-system-server.onrender.com/api/packages/add", packageData, {
         headers: {
           Authorization: `Bearer ${token}`
         }
