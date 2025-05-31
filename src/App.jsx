@@ -1,7 +1,5 @@
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-// import { ToastContainer } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 import { Toaster } from 'react-hot-toast';
 
 import Navbar from './components/Navbar'
@@ -58,28 +56,6 @@ function App() {
               <Route path="/dashboard/admin/manage-users" element={<UserManagement />} />
               <Route path="/dashboard/admin/manage-candidates" element={<ManageCandidates />} />
               <Route path="/dashboard/assigned-tours" element={<MyAssignedTours />} />
-            
-             
-
-            
-
-
-
-            {/* Tourist 
-            <Route path="my-bookings" element={<MyBookings />} />
-            <Route path="add-stories" element={<AddStories />} />
-            <Route path="manage-stories" element={<ManageStories />} />
-            <Route path="join-tour-guide" element={<JoinAsTourGuide />} />
-
-             Tour Guide 
-            <Route path="assigned-tours" element={<AssignedTours />} />
-
-             Admin 
-            <Route path="admin/stats" element={<AdminStats />} />
-            <Route path="admin/manage-users" element={<ManageUsers />} />
-            <Route path="admin/manage-candidates" element={<ManageCandidates />} />
-            <Route path="admin/add-package" element={<AddPackage />} /> */}
-
           </Route>
         </Routes>
       </main>
